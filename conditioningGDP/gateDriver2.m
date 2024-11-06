@@ -1,6 +1,4 @@
-
-
-%RT = 1.18/(f_operating*CT)
+f_operating = 100e3;
 
 %to calculate skin depth
 freeSpaceP = 4*pi*10^-7; 
