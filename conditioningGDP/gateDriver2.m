@@ -1,10 +1,12 @@
+%this file is to filter the 5 wire provided via calculating whether which wire produce current density below 3A/mm^2
+
 f_operating = 100e3;
 
 %to calculate skin depth
 freeSpaceP = 4*pi*10^-7; 
 relativeP_copperWire = 1; % 3C90
 resistivity_copperWire = 1.68e-8;
-skinDepth = sqrt(resistivity/(pi*f_operating*relativeP*freeSpaceP))
+skinDepth = sqrt(resistivity_copperWire/(pi*f_operating*relativeP_copperWire*freeSpaceP))
 
 L_magGateDriver = 349e-6;
 Vs_gateDriver = 15;
