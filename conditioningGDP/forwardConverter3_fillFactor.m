@@ -10,10 +10,13 @@ result_calculated = [0,0,0,0,0]
 result_required = [0,0,0,0,0];
 
 %to calculate area of winding window
-height = (2*11.8)*10^-3;
-width = ((25.6-11.1)/2)*10^-3;
-A_windingWindow = 2*(height*width)
-numOfTurn_calculated = 12;
+%height = (2*11.8)*10^-3;
+%width = ((25.6-11.1)/2)*10^-3;
+%A_windingWindow = 2*(height*width)
+%numOfTurn_calculated = 12;
+
+A_windingWindow_inMM = 122;
+A_windingWindow_inM = 122*10^-6;
 
 %adjust the tolerance accordingly, can explain in report for different
 %Kfill value
@@ -30,9 +33,9 @@ numOfTurn_required = [0,0,0,0,0]
 for i = 1:5
     display(i)
     area_copperWire(i) = pi*(diameter_copperWire_withMaxTolerance(i)/2)^2
-    Kfill_calculated(i) =  (4*numOfTurn_calculated*area_copperWire(i))/A_windingWindow
+    Kfill_calculated(i) =  (4*numOfTurn_calculated*area_copperWire(i))/A_windingWindow_inM
 
-    condition_left_required = Kfill_required(i)*A_windingWindow
+    condition_left_required = Kfill_required(i)*A_windingWindow_inM
     condition_right_required = 4*numOfTurn_calculated*area_copperWire(i)
 
     if condition_left_required > condition_right_required
