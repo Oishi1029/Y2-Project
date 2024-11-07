@@ -3,7 +3,7 @@
 Al = 1170*10^-9;
 A_core = 1.22e-5; %TN13
 
-delta_B = 300e-3;
+delta_B = 300e-3; %obtain by obtaining average between 250 and 350 @https://electronics.stackexchange.com/questions/535955/how-to-calculate-number-of-turns-n-for-a-gate-driver-transformer
 D = 0.23;
 D2 = 0.45;
 f_resonant = 10e3;
