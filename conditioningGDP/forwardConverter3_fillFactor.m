@@ -30,10 +30,10 @@ numOfTurn_required = [0,0,0,0,0]
 for i = 1:5
     display(i)
     area_copperWire(i) = pi*(diameter_copperWire_withMaxTolerance(i)/2)^2
-    Kfill_calculated(i) =  (3*numOfTurn_calculated*area_copperWire(i))/A_windingWindow
+    Kfill_calculated(i) =  (4*numOfTurn_calculated*area_copperWire(i))/A_windingWindow
 
     condition_left_required = Kfill_required(i)*A_windingWindow
-    condition_right_required = 3*numOfTurn_calculated*area_copperWire(i)
+    condition_right_required = 4*numOfTurn_calculated*area_copperWire(i)
 
     if condition_left_required > condition_right_required
     result_required(i) = 1
