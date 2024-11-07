@@ -52,7 +52,7 @@ for i = 1:5
 
     area_skindepth(i) = area_copperWire(i) - area_empty(i)
 
-    currentDensity_copperWire(i) = currentMagnetisingGateDriver./area_skindepth(i)
+    currentDensity_copperWire(i) = currentMagnetisingGateDriverA./area_skindepth(i)
 
     currentDensity_copperWire_inMM(i) = currentDensity_copperWire(i) / conversion_factor
 
@@ -61,13 +61,9 @@ for i = 1:5
     else
     ratio(i) = area_skindepth(i)/area_copperWire(i)
     end
+
 end
 
 skinDepth
 currentMagnetisingGateDriverA
 currentMagnetisingGateDriverB
-
-
-
-
-
