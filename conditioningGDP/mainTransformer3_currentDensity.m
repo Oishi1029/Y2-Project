@@ -7,7 +7,7 @@ resistivity_copperWire = 1.68e-8;
 skinDepth = sqrt(resistivity_copperWire/(pi*f_operating*relativeP_copperWire*freeSpaceP))
 
 
-L_mag =  3.4901e-04;
+L_mag =  3.0236e-04;
 Vs = 15;
 d = 0.45;
 T = 1/f_operating;
