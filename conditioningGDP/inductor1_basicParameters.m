@@ -25,9 +25,9 @@ end
 
 A_turn_prefer_inMM2 = A_turn(1)
 
-A_cu_prefer_inMM2 = N*A_turn_prefer_inMM2
+A_cu_prefer_inMM2 = N*A_turn_prefer_inMM2*2
 
-width_inMM = 25.4 - 13.4
+width_inMM = (25.4 - 13.4)/2
 height_inMM = 20.9
 A_windingWindow_inMM2 = width_inMM*height_inMM 
 %A_windingWindow_inMM2 = 122; %%%
