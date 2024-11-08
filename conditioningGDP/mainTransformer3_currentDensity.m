@@ -8,15 +8,13 @@ skinDepth = sqrt(resistivity_copperWire/(pi*f_operating*relativeP_copperWire*fre
 
 
 L_mag =  3.0236e-04;
-Vs = 15;
 Vout = 8; 
 Vin = 35;
 d = Vout/Vin;
 T = 1/f_operating;
 VTA = (Vs*d*T);
-currentMagnetisingA = VTA/L_mag
-
-currentMagnetisingB = (2*Vs*d)/(2*pi*f_operating*L_mag)
+inductor_rms_current = 2.64584; %obtained from simulation
+magnetising_rms_current = 0.1*inductor_rms_current;
 
 
 
@@ -54,7 +52,7 @@ for i = 1:5
 
     area_skindepth(i) = area_copperWire(i) - area_empty(i)
 
-    currentDensity_copperWire(i) = currentMagnetisingA./area_skindepth(i)
+    currentDensity_copperWire(i) = magnetising_rms_current./area_skindepth(i)
 
     currentDensity_copperWire_inMM(i) = currentDensity_copperWire(i) / conversion_factor
 
@@ -66,8 +64,7 @@ for i = 1:5
 end
 
 skinDepth
-currentMagnetisingA
-%currentMagnetisingB
+
 
 
 
