@@ -66,4 +66,4 @@ end
 
 skinDepth
 currentMagnetisingGateDriverA
-currentMagnetisingGateDriverB
+
