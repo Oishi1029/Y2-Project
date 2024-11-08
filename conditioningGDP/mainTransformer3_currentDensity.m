@@ -9,7 +9,9 @@ skinDepth = sqrt(resistivity_copperWire/(pi*f_operating*relativeP_copperWire*fre
 
 L_mag =  3.0236e-04;
 Vs = 15;
-d = 0.45;
+Vout = 8; 
+Vin = 35;
+d = Vout/Vin;
 T = 1/f_operating;
 VTA = (Vs*d*T);
 currentMagnetisingA = VTA/L_mag
