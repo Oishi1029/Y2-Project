@@ -4,8 +4,8 @@ Al = 1170*10^-9;
 A_core = 1.22e-5; %TN13
 
 delta_B = 300e-3; %obtain by obtaining average between 250 and 350 @https://electronics.stackexchange.com/questions/535955/how-to-calculate-number-of-turns-n-for-a-gate-driver-transformer
-D = 0.23;
-D2 = 0.45;
+
+D2 = 0.45; %gate driver not directly affect output voltage, so can use 0.45 for worst case
 f_resonant = 10e3;
 f_operating = 100e3;
 f_turnOn = 1/(6.4*10^-9);
