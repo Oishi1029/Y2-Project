@@ -37,32 +37,13 @@ for i = 1:5
     area_copperWire(i) = pi*(diameter_copperWire_withMaxTolerance(i)/2)^2
     Kfill_calculated(i) =  (3*numOfTurn_calculated*area_copperWire(i))/A_windingWindow
     
-    %condition_left_calculated = Kfill_calculated(i)*A_windingWindow
-    %condition_right_calculated = 3*numOfTurn_calculated*area_copperWire(i)
-    %numOfTurn_required(i) = (Kfill_required(i) * A_windingWindow)/ (3*area_copperWire(i))
-
     condition_left_required = Kfill_required(i)*A_windingWindow
     condition_right_required = 3*numOfTurn_calculated*area_copperWire(i)
     
-    
-    
-    %{
-    if condition_left_calculated > condition_right_calculated
-    result_calculated(i) = 1
-    else 
-    result_calculated(i) = 0
-    end
-    %}
-
     if condition_left_required > condition_right_required
     result_required(i) = 1
     else 
     result_required(i) = 0
     end
-    
-        
-
-    %N_min(i) = (Kfill_min*A_windingWindow)/(3*area_copperWire(i))
-    %N_max(i) = (Kfill_max*A_windingWindow)/(3*area_copperWire(i))
     
 end
